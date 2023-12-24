@@ -11,7 +11,7 @@ people_data = [
     ('Artyr', 11),
     ('Myrmyr', 11)
 ]
-cursor.executemany('INSERT INTO People (name, age) VALUES (?, ?)', people_data)
+cursor.execute('INSERT INTO People (name, age) VALUES (?, ?)', people_data)
 conn.commit()
 cursor.execute('SELECT * FROM People')
 ryadoks = cursor.fetchall()
